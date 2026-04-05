@@ -46,9 +46,9 @@ const skills = {
 };
 
 const experiences = [
-  { title: "Cryptography Developer", company: "INSA, Ethiopia", period: "2025 - Present", description: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards." },
-  { title: "Full Stack Developer", company: "CoinPulse & Personal Projects", period: "2023 - Present", description: "Built CoinPulse — a real-time cryptocurrency tracking app with live price updates and market analytics using Next.js." },
-  { title: "Web Based Diabetes Prediction", company: "Personal Project", period: "2024", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
+  { title: "Cryptography Developer", company: "INSA, Ethiopia", period: "June 30 - August 30", description: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards." },
+  { title: "Full Stack Developer", company: "CoinPulse & Personal Projects", period: "February 2026", description: "Built CoinPulse — a real-time cryptocurrency tracking app with live price updates and market analytics using Next.js." },
+  { title: "Web Based Diabetes Prediction", company: "Personal Project", period: "March 12 - Present", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
 ];
 
 const projects = [
