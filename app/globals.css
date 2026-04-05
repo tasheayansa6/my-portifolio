@@ -1,26 +1,51 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* ----------------------------------------
+   Custom Global Styles
+---------------------------------------- */
+
+/* Apply your JetBrains Mono font to the body */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --jetbrainsMono: "JetBrains Mono", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply text-white font-sans;
+  background-color: #0a0a0f;
+  font-family: var(--jetbrainsMono), monospace;
+}
+
+@layer components {
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .text-outline:hover {
+    -webkit-text-stroke: 1px #00ff99;
+  }
+
+  .container {
+    @apply mx-auto px-4;
+  }
+}
+
+/* Accent color example (matches Tailwind config) */
+.text-accent {
+  color: #00ffff;
 }
