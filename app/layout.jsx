@@ -12,6 +12,17 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata = {
   title: "Teshale Ayansa | Software Engineer",
   description: "Portfolio of Teshale Ayansa — Software Engineer specializing in Web Development and Cybersecurity.",
+  openGraph: {
+    title: "Teshale Ayansa | Software Engineer",
+    description: "Portfolio of Teshale Ayansa — Software Engineer specializing in Web Development and Cybersecurity.",
+    images: [{ url: "/port/tashe.jpg", width: 800, height: 800, alt: "Teshale Ayansa" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Teshale Ayansa | Software Engineer",
+    description: "Portfolio of Teshale Ayansa — Software Engineer specializing in Web Development and Cybersecurity.",
+    images: ["/port/tashe.jpg"],
+  },
 };
 
 export default function RootLayout({ children }) {
