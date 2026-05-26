@@ -4,6 +4,19 @@ const nextConfig = {
   images: {
     qualities: [75, 100],
   },
+  async headers() {
+    return [
+      {
+        source: '/TeshaleAyansa_Resume.pdf',
+        headers: [
+          {
+            key: 'Content-Disposition',
+            value: 'attachment; filename="TeshaleAyansa_Resume.pdf"',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
