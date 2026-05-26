@@ -138,7 +138,7 @@ export default function Page() {
               {/* Photo */}
               <div className="w-full h-full rounded-full bg-gradient-to-tr from-accent to-white/20 p-[3px]">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
-                  <Image src="/port/tashe-profile.jpg" alt="Teshale Ayansa" fill className="object-cover" quality={100} priority />
+                  <Image src="/port/tashe.jpg" alt="Teshale Ayansa" fill className="object-cover" quality={100} priority />
                 </div>
               </div>
             </div>
