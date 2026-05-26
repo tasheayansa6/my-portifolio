@@ -111,7 +111,7 @@ export default function Page() {
             </div>
             <p className="text-white/50 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">Building modern, secure, and scalable web applications. Passionate about clean code, cybersecurity, and solving complex problems.</p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
-              <a href="/Teshale_Ayansa_CV.pdf" download="Teshale_Ayansa_CV.pdf" className="flex items-center gap-2 px-6 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent/80 transition-colors">
+              <a href="/TeshaleAyansa_Resume.pdf" download="TeshaleAyansa_Resume.pdf" className="flex items-center gap-2 px-6 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent/80 transition-colors">
                 <Download className="w-4 h-4" /> Download CV
               </a>
               <a href="https://github.com/tasheayansa6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-accent transition-all">

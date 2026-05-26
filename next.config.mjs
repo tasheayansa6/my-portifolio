@@ -7,11 +7,11 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/Teshale_Ayansa_CV.pdf',
+        source: '/TeshaleAyansa_Resume.pdf',
         headers: [
           {
             key: 'Content-Disposition',
-            value: 'attachment; filename="Teshale_Ayansa_CV.pdf"',
+            value: 'attachment; filename="TeshaleAyansa_Resume.pdf"',
           },
         ],
       },
