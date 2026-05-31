@@ -15,6 +15,7 @@ import {
 import {
   SiCplusplus, SiTypescript, SiTailwindcss, SiExpress, SiMongodb,
   SiMysql, SiPostgresql, SiDjango, SiFastapi, SiNextdotjs, SiC, SiFlask, SiSqlite,
+  SiTensorflow, SiScikitlearn, SiLangchain, SiHuggingface,
 } from "react-icons/si";
 import { HiLightningBolt } from "react-icons/hi";
 
@@ -31,6 +32,9 @@ function StackIcon({ name, size = 16 }) {
     postgresql: <SiPostgresql {...p} />, mysql: <SiMysql {...p} />, sqlite: <SiSqlite {...p} />,
     mongodb: <SiMongodb {...p} />, cryptography: <FaLock {...p} />,
     git: <FaGitAlt {...p} />, github: <FaGithub {...p} />,
+    tensorflow: <SiTensorflow {...p} />, "scikit-learn": <SiScikitlearn {...p} />,
+    langchain: <SiLangchain {...p} />, "hugging face": <SiHuggingface {...p} />,
+    "flask ml": <SiFlask {...p} />,
   };
   return icons[name.toLowerCase()] || <FaCode {...p} />;
 }
@@ -43,6 +47,7 @@ const skills = {
   database: [{ name: "MongoDB" }, { name: "MySQL" }, { name: "SQLite" }, { name: "PostgreSQL" }],
   security: [{ name: "Cryptography" }],
   devops: [{ name: "Git" }, { name: "GitHub" }],
+  "machine learning & AI Tools": [{ name: "scikit-learn" }, { name: "TensorFlow" }, { name: "LangChain" }, { name: "Hugging Face" }, { name: "Flask ML" }],
 };
 
 const experiences = [
