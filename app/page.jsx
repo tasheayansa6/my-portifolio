@@ -54,15 +54,16 @@ const experiences = [
   { title: "Cryptography Developer", company: "INSA, Ethiopia", period: "June 30 - August 30", description: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards." },
   { title: "Full Stack Developer", company: "CoinPulse & Personal Projects", period: "February 2026", description: "Built CoinPulse — a real-time cryptocurrency tracking app with live price updates and market analytics using Next.js." },
   { title: "Web Based Diabetes Prediction", company: "Personal Project", period: "March 12 - Present", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
+  { title: "Full Stack Developer", company: "Shaggar Real Estate", period: "2026 - Present", description: "Developed a modern real estate platform for Shaggar, featuring property listings, search filters, and a responsive UI built with Next.js and Tailwind CSS." },
 ];
 
 const projects = [
-  { id: 1, title: "Post-Quantum KEM Implementation", category: "Cryptography", image: null, description: "Implementation of Post-Quantum Key Encapsulation Mechanism using C language, resistant to quantum computer attacks.", details: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards. Follows NIST post-quantum cryptography guidelines.", tech: ["C", "OpenSSL", "Cryptography", "Post-Quantum"], github: "https://github.com/tasheayansa6/Post-Quantum-KEM-Implementation" },
-  { id: 2, title: "Web Based Diabetes Prediction", category: "AI & ML", image: "/port/photo_2026-06-21_11-51-18.jpg", description: "Web-based diabetes prediction system powered by Machine Learning with a responsive frontend.", details: "Built a web-based diabetes prediction system using a Machine Learning model served via a Flask backend. The frontend is built with HTML, Tailwind CSS, and JavaScript, providing a clean and responsive interface for users to input health data and receive predictions.", tech: ["Python", "Flask", "JavaScript", "Tailwind CSS", "HTML5", "ML"], github: "https://github.com/tasheayansa6/diabetes-prediction-system" },
-  { id: 3, title: "AI Resume Analyzer", category: "AI & Web", image: "/port/ai resume.jpg", description: "AI-powered resume analysis web app that extracts key information, evaluates skills, and provides intelligent feedback.", details: "Developed an AI-powered resume analysis web application that extracts key information from uploaded resumes, evaluates skills against job descriptions, and provides intelligent, actionable feedback.", tech: ["React", "Tailwind CSS", "JavaScript", "AI"], github: "https://github.com/tasheayansa6/ai-resume-analyzer" },
-  { id: 4, title: "CoinPulse", category: "Full Stack", image: "/port/coinpulse.jpg", description: "Real-time cryptocurrency tracking app with live price updates and market analytics.", details: "Built CoinPulse — a real-time cryptocurrency tracking application featuring live price updates, market analytics, and interactive charts. Developed with Next.js for fast server-side rendering and a clean, responsive UI.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/coinpulse" },
-  { id: 5, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg", description: "A unified university platform connecting students, resources, and campus services in one place.", details: "Built UniHub — a comprehensive university hub platform designed to connect students with campus resources, services, and communities. Features a modern UI with seamless navigation across university tools and services.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/UniHub" },
-
+  { id: 1, title: "Post-Quantum KEM Implementation", category: "Cryptography", image: "/port/pkem.jpg", description: "Implementation of Post-Quantum Key Encapsulation Mechanism using C language, resistant to quantum computer attacks.", details: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards. Follows NIST post-quantum cryptography guidelines.", tech: ["C", "OpenSSL", "Cryptography", "Post-Quantum"], github: "https://github.com/tasheayansa6/Post-Quantum-KEM-Implementation", live: null },
+  { id: 2, title: "Web Based Diabetes Prediction", category: "AI & ML", image: "/port/photo_2026-06-21_11-51-18.jpg", description: "Web-based diabetes prediction system powered by Machine Learning with a responsive frontend.", details: "Built a web-based diabetes prediction system using a Machine Learning model served via a Flask backend. The frontend is built with HTML, Tailwind CSS, and JavaScript, providing a clean and responsive interface for users to input health data and receive predictions.", tech: ["Python", "Flask", "JavaScript", "Tailwind CSS", "HTML5", "ML"], github: "https://github.com/tasheayansa6/diabetes-prediction-system", live: "https://diabetes-prediction-system-n7ik.onrender.com" },
+  { id: 3, title: "AI Resume Analyzer", category: "AI & Web", image: "/port/ai resume.jpg", description: "AI-powered resume analysis web app that extracts key information, evaluates skills, and provides intelligent feedback.", details: "Developed an AI-powered resume analysis web application that extracts key information from uploaded resumes, evaluates skills against job descriptions, and provides intelligent, actionable feedback.", tech: ["React", "Tailwind CSS", "JavaScript", "AI"], github: "https://github.com/tasheayansa6/ai-resume-analyzer", live: "https://ai-resume-analyzer-gamma-lake.vercel.app/" },
+  { id: 4, title: "CoinPulse", category: "Full Stack", image: "/port/coinpulse.jpg", description: "Real-time cryptocurrency tracking app with live price updates and market analytics.", details: "Built CoinPulse — a real-time cryptocurrency tracking application featuring live price updates, market analytics, and interactive charts. Developed with Next.js for fast server-side rendering and a clean, responsive UI.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/coinpulse", live: "https://coinpulse-orpin.vercel.app/" },
+  { id: 5, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg", description: "A unified university platform connecting students, resources, and campus services in one place.", details: "Built UniHub — a comprehensive university hub platform designed to connect students with campus resources, services, and communities. Features a modern UI with seamless navigation across university tools and services.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/UniHub", live: "https://unihub-h67h.onrender.com" },
+  { id: 6, title: "Shaggar Real Estate", category: "Full Stack", image: "/port/photo_2026-06-21_11-25-39.jpg", description: "A modern real estate platform for Shaggar, featuring property listings, search filters, and a responsive UI.", details: "Developed a modern real estate platform for Shaggar, featuring property listings, advanced search filters, and a clean responsive UI. Built with Next.js and Tailwind CSS to provide a seamless property browsing experience.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/shaggar_realstat2", live: "https://shaggar-realstate.vercel.app" },
 ];
 
 const contactInfo = [
@@ -172,8 +173,8 @@ export default function Page() {
 
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {[
-              { icon: <GraduationCap className="w-8 h-8 text-accent mb-4" />, title: "Education", content: (<div className="space-y-2 text-white/50"><p className="font-semibold text-white">BSc in Computer Science</p><p className="text-sm">Haramaya University</p><p className="font-mono text-accent text-sm">2023 - Present</p></div>) },
-              { icon: <Briefcase className="w-8 h-8 text-accent mb-4" />, title: "Current Role", content: (<div className="space-y-2 text-white/50"><p className="font-semibold text-white">Computer Science Student</p><p className="text-sm">Haramaya University</p><p className="text-sm">AI Trainer & Full Stack Developer</p><p className="text-sm">Post-Quantum Cryptography Researcher</p><p className="text-sm font-mono text-accent mt-3">2024 - Present</p></div>) },
+              { icon: <GraduationCap className="w-8 h-8 text-accent mb-4" />, title: "Education", content: (<div className="space-y-2 text-white/50"><p className="font-semibold text-white">BSc in Computer Science</p><p className="text-sm">Haramaya University</p><p className="font-mono text-accent text-sm">2023 - 2026</p></div>) },
+              { icon: <Briefcase className="w-8 h-8 text-accent mb-4" />, title: "Current Role", content: (<div className="space-y-2 text-white/50"><p className="font-semibold text-white">Unemployed</p><p className="text-sm">AI Trainer & Full Stack Developer</p><p className="text-sm font-mono text-accent mt-3">2024 - 2026</p></div>) },
               { icon: <Globe className="w-8 h-8 text-accent mb-4" />, title: "Languages", content: (<div className="space-y-3 text-white/50"><div className="flex justify-between"><span>English</span><span className="text-accent">Proficient</span></div><div className="flex justify-between"><span>Oromo</span><span className="text-accent">Native</span></div><div className="flex justify-between"><span>Amharic</span><span className="text-accent">Conversational</span></div></div>) },
             ].map(({ icon, title, content }, i) => (
               <motion.div key={title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-accent/50 transition-colors">
@@ -191,8 +192,10 @@ export default function Page() {
                   <h4 className="font-mono text-sm text-accent mb-4 uppercase tracking-wider">{category}</h4>
                   <div className="flex flex-wrap gap-2">
                     {techs.map(({ name }) => (
-                      <div key={name} className="group flex items-center gap-2 px-3 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-accent/50 transition-all cursor-default">
-                        <StackIcon name={name} /><span className="text-sm text-white/70 group-hover:text-white transition-colors">{name}</span>
+                      <div key={name} className="group flex items-center gap-2 pl-0 pr-3 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-accent/5 hover:border-accent/40 transition-all cursor-default overflow-hidden">
+                        <div className="w-1 self-stretch bg-accent/60 group-hover:bg-accent rounded-l-lg transition-colors flex-shrink-0" />
+                        <span className="pl-2"><StackIcon name={name} /></span>
+                        <span className="text-sm text-white/70 group-hover:text-white transition-colors">{name}</span>
                       </div>
                     ))}
                   </div>
@@ -250,11 +253,18 @@ export default function Page() {
                     {project.tech.slice(0, 3).map((tech, idx) => <span key={idx} className="font-mono text-xs px-2 py-1 bg-accent/10 text-accent border border-accent/30 rounded">{tech}</span>)}
                     {project.tech.length > 3 && <span className="font-mono text-xs px-2 py-1 bg-white/5 text-white/40 border border-white/10 rounded">+{project.tech.length - 3}</span>}
                   </div>
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-2 text-sm text-white/40 hover:text-accent transition-colors">
-                      <Github className="w-4 h-4" /> Code
-                    </a>
-                  )}
+                  <div className="flex items-center gap-4 pt-1">
+                    {project.github && (
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-sm text-white/40 hover:text-accent transition-colors">
+                        <Github className="w-4 h-4" /> Code
+                      </a>
+                    )}
+                    {project.live && (
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-sm font-medium text-accent border border-accent/40 bg-accent/10 px-3 py-1 rounded-full hover:bg-accent hover:text-black transition-all">
+                        <ExternalLink className="w-3.5 h-3.5" /> Live Demo
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -282,11 +292,18 @@ export default function Page() {
                     <h3 className="font-mono text-accent text-sm mb-3 uppercase tracking-wider">Overview</h3>
                     <p className="text-white/60 leading-relaxed">{selectedProject.details}</p>
                   </div>
-                  {selectedProject.github && (
-                    <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent/80 transition-colors">
-                      <Github className="w-4 h-4" /> View Code
-                    </a>
-                  )}
+                  <div className="flex flex-wrap gap-3">
+                    {selectedProject.github && (
+                      <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-accent/50 transition-all">
+                        <Github className="w-4 h-4" /> View Code
+                      </a>
+                    )}
+                    {selectedProject.live && (
+                      <a href={selectedProject.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-black font-semibold rounded-lg hover:bg-accent/80 transition-colors">
+                        <ExternalLink className="w-4 h-4" /> Live Demo
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
