@@ -57,11 +57,12 @@ const experiences = [
 ];
 
 const projects = [
-  { id: 1, title: "Post-Quantum KEM Implementation", category: "Cryptography", description: "Implementation of Post-Quantum Key Encapsulation Mechanism using C language, resistant to quantum computer attacks.", details: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards. Follows NIST post-quantum cryptography guidelines.", tech: ["C", "OpenSSL", "Cryptography", "Post-Quantum"], github: "https://github.com/tasheayansa6/Post-Quantum-KEM-Implementation" },
-  { id: 2, title: "Web Based Diabetes Prediction", category: "AI & ML", description: "Web-based diabetes prediction system powered by Machine Learning with a responsive frontend.", details: "Built a web-based diabetes prediction system using a Machine Learning model served via a Flask backend. The frontend is built with HTML, Tailwind CSS, and JavaScript, providing a clean and responsive interface for users to input health data and receive predictions.", tech: ["Python", "Flask", "JavaScript", "Tailwind CSS", "HTML5", "ML"], github: "https://github.com/tasheayansa6/diabetes-prediction-system" },
-  { id: 3, title: "AI Resume Analyzer", category: "AI & Web", description: "AI-powered resume analysis web app that extracts key information, evaluates skills, and provides intelligent feedback.", details: "Developed an AI-powered resume analysis web application that extracts key information from uploaded resumes, evaluates skills against job descriptions, and provides intelligent, actionable feedback.", tech: ["React", "Tailwind CSS", "JavaScript", "AI"], github: "https://github.com/tasheayansa6/ai-resume-analyzer" },
-  { id: 4, title: "CoinPulse", category: "Full Stack", description: "Real-time cryptocurrency tracking app with live price updates and market analytics.", details: "Built CoinPulse — a real-time cryptocurrency tracking application featuring live price updates, market analytics, and interactive charts. Developed with Next.js for fast server-side rendering and a clean, responsive UI.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/coinpulse" },
-  { id: 5, title: "Portfolio Website", category: "Frontend", description: "Responsive developer portfolio built with Next.js, Tailwind CSS, and Framer Motion animations.", details: "Designed and developed this responsive portfolio website using Next.js 15, Tailwind CSS, and Framer Motion. Features smooth animations, dark theme, and fully responsive layout.", tech: ["Next.js", "Tailwind CSS", "Framer Motion"], github: "https://github.com/tasheayansa6/my-portifolio" },
+  { id: 1, title: "Post-Quantum KEM Implementation", category: "Cryptography", image: null, description: "Implementation of Post-Quantum Key Encapsulation Mechanism using C language, resistant to quantum computer attacks.", details: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards. Follows NIST post-quantum cryptography guidelines.", tech: ["C", "OpenSSL", "Cryptography", "Post-Quantum"], github: "https://github.com/tasheayansa6/Post-Quantum-KEM-Implementation" },
+  { id: 2, title: "Web Based Diabetes Prediction", category: "AI & ML", image: "/port/photo_2026-06-21_11-51-18.jpg", description: "Web-based diabetes prediction system powered by Machine Learning with a responsive frontend.", details: "Built a web-based diabetes prediction system using a Machine Learning model served via a Flask backend. The frontend is built with HTML, Tailwind CSS, and JavaScript, providing a clean and responsive interface for users to input health data and receive predictions.", tech: ["Python", "Flask", "JavaScript", "Tailwind CSS", "HTML5", "ML"], github: "https://github.com/tasheayansa6/diabetes-prediction-system" },
+  { id: 3, title: "AI Resume Analyzer", category: "AI & Web", image: "/port/ai resume.jpg", description: "AI-powered resume analysis web app that extracts key information, evaluates skills, and provides intelligent feedback.", details: "Developed an AI-powered resume analysis web application that extracts key information from uploaded resumes, evaluates skills against job descriptions, and provides intelligent, actionable feedback.", tech: ["React", "Tailwind CSS", "JavaScript", "AI"], github: "https://github.com/tasheayansa6/ai-resume-analyzer" },
+  { id: 4, title: "CoinPulse", category: "Full Stack", image: "/port/coinpulse.jpg", description: "Real-time cryptocurrency tracking app with live price updates and market analytics.", details: "Built CoinPulse — a real-time cryptocurrency tracking application featuring live price updates, market analytics, and interactive charts. Developed with Next.js for fast server-side rendering and a clean, responsive UI.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/coinpulse" },
+  { id: 5, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg", description: "A unified university platform connecting students, resources, and campus services in one place.", details: "Built UniHub — a comprehensive university hub platform designed to connect students with campus resources, services, and communities. Features a modern UI with seamless navigation across university tools and services.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/UniHub" },
+  { id: 6, title: "Portfolio Website", category: "Frontend", image: null, description: "Responsive developer portfolio built with Next.js, Tailwind CSS, and Framer Motion animations.", details: "Designed and developed this responsive portfolio website using Next.js 15, Tailwind CSS, and Framer Motion. Features smooth animations, dark theme, and fully responsive layout.", tech: ["Next.js", "Tailwind CSS", "Framer Motion"], github: "https://github.com/tasheayansa6/my-portifolio" },
 ];
 
 const contactInfo = [
@@ -233,7 +234,14 @@ export default function Page() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, i) => (
               <motion.div key={project.id} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} onClick={() => setSelectedProject(project)} className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden cursor-pointer hover:border-accent/50 transition-colors">
-                <div className="h-2 bg-gradient-to-r from-accent to-white/20" />
+                {project.image ? (
+                  <div className="relative w-full h-44 overflow-hidden">
+                    <Image src={project.image} alt={project.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  </div>
+                ) : (
+                  <div className="h-2 bg-gradient-to-r from-accent to-white/20" />
+                )}
                 <div className="p-6 space-y-4">
                   <span className="font-mono text-xs text-accent bg-accent/10 border border-accent/30 px-2 py-1 rounded-full">{project.category}</span>
                   <h3 className="text-xl font-semibold group-hover:text-accent transition-colors line-clamp-2">{project.title}</h3>
@@ -265,6 +273,11 @@ export default function Page() {
                   <button onClick={() => setSelectedProject(null)} className="p-2 hover:bg-white/10 rounded-lg transition-colors border border-white/10 ml-4 flex-shrink-0"><X className="w-5 h-5" /></button>
                 </div>
                 <div className="p-6 space-y-6">
+                  {selectedProject.image && (
+                    <div className="relative w-full h-52 rounded-xl overflow-hidden">
+                      <Image src={selectedProject.image} alt={selectedProject.title} fill className="object-cover" />
+                    </div>
+                  )}
                   <div>
                     <h3 className="font-mono text-accent text-sm mb-3 uppercase tracking-wider">Overview</h3>
                     <p className="text-white/60 leading-relaxed">{selectedProject.details}</p>
