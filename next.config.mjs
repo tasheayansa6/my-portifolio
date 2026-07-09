@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactCompiler: true,
   images: {
     qualities: [75, 100],
   },
@@ -18,4 +19,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

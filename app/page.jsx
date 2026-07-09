@@ -4,18 +4,17 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import {
-  Download, Mail, Phone, MapPin,
-  GraduationCap, Code2, Briefcase, Globe,
-  ExternalLink, X,
+  Download, Github, Linkedin, Mail, Mail as MailIcon,
+  Phone, MapPin, Instagram, GraduationCap, Code2,
+  Briefcase, Globe, Award, ExternalLink, X,
 } from "lucide-react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import {
   FaPython, FaJsSquare, FaHtml5, FaCss3Alt, FaReact,
-  FaNodeJs, FaCode, FaGitAlt, FaLock,
+  FaNodeJs, FaCode, FaGitAlt, FaGithub, FaLock,
 } from "react-icons/fa";
 import {
   SiCplusplus, SiTypescript, SiTailwindcss, SiExpress, SiMongodb,
-  SiMysql, SiPostgresql, SiDjango, SiNextdotjs, SiC, SiFlask, SiSqlite,
+  SiMysql, SiPostgresql, SiDjango, SiFastapi, SiNextdotjs, SiC, SiFlask, SiSqlite,
   SiTensorflow, SiScikitlearn, SiLangchain, SiHuggingface,
 } from "react-icons/si";
 import { HiLightningBolt } from "react-icons/hi";
@@ -32,7 +31,7 @@ function StackIcon({ name, size = 16 }) {
     fastapi: <HiLightningBolt {...p} />, django: <SiDjango {...p} />, flask: <SiFlask {...p} />,
     postgresql: <SiPostgresql {...p} />, mysql: <SiMysql {...p} />, sqlite: <SiSqlite {...p} />,
     mongodb: <SiMongodb {...p} />, cryptography: <FaLock {...p} />,
-    git: <FaGitAlt {...p} />, github: <FaGitAlt {...p} />,
+    git: <FaGitAlt {...p} />, github: <FaGithub {...p} />,
     tensorflow: <SiTensorflow {...p} />, "scikit-learn": <SiScikitlearn {...p} />,
     langchain: <SiLangchain {...p} />, "hugging face": <SiHuggingface {...p} />,
     "flask ml": <SiFlask {...p} />,
@@ -53,25 +52,25 @@ const skills = {
 
 const experiences = [
   { title: "Cryptography Developer", company: "INSA, Ethiopia", period: "June 30 - August 30", description: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards." },
-  { title: "Full Stack Developer", company: "UniHub Platform", period: "2025 - Present", description: "Built UniHub — a comprehensive university platform using MERN stack with real-time chat (Socket.io), JWT authentication, and scalable MongoDB architecture connecting students with campus resources." },
-  { title: "Full Stack Developer", company: "Shaggar Real Estate", period: "2026 - Present", description: "Developed an AI-powered real estate platform using MERN stack, featuring intelligent property recommendations, virtual tours, JWT authentication, and real-time notifications via Socket.io." },
-  { title: "Machine Learning Developer", company: "Personal Project", period: "March 2026 - Present", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
+  { title: "Full Stack Developer", company: "CoinPulse & Personal Projects", period: "February 2026", description: "Built CoinPulse — a real-time cryptocurrency tracking app with live price updates and market analytics using Next.js." },
+  { title: "Web Based Diabetes Prediction", company: "Personal Project", period: "March 12 - Present", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
+  { title: "Full Stack Developer", company: "Shaggar Real Estate", period: "2026 - Present", description: "Developed a modern real estate platform for Shaggar, featuring property listings, search filters, and a responsive UI built with Next.js and Tailwind CSS." },
 ];
 
 const projects = [
   { id: 1, title: "Post-Quantum KEM Implementation", category: "Cryptography", image: "/port/pkem.jpg", description: "Implementation of Post-Quantum Key Encapsulation Mechanism using C language, resistant to quantum computer attacks.", details: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards. Follows NIST post-quantum cryptography guidelines.", tech: ["C", "OpenSSL", "Cryptography", "Post-Quantum"], github: "https://github.com/tasheayansa6/Post-Quantum-KEM-Implementation", live: null },
   { id: 2, title: "Web Based Diabetes Prediction", category: "AI & ML", image: "/port/photo_2026-06-21_11-51-18.jpg", description: "Web-based diabetes prediction system powered by Machine Learning with a responsive frontend.", details: "Built a web-based diabetes prediction system using a Machine Learning model served via a Flask backend. The frontend is built with HTML, Tailwind CSS, and JavaScript, providing a clean and responsive interface for users to input health data and receive predictions.", tech: ["Python", "Flask", "JavaScript", "Tailwind CSS", "HTML5", "ML"], github: "https://github.com/tasheayansa6/diabetes-prediction-system", live: "https://diabetes-prediction-system-n7ik.onrender.com" },
   { id: 3, title: "AI Resume Analyzer", category: "AI & Web", image: "/port/ai resume.jpg", description: "AI-powered resume analysis web app that extracts key information, evaluates skills, and provides intelligent feedback.", details: "Developed an AI-powered resume analysis web application that extracts key information from uploaded resumes, evaluates skills against job descriptions, and provides intelligent, actionable feedback.", tech: ["React", "Tailwind CSS", "JavaScript", "AI"], github: "https://github.com/tasheayansa6/ai-resume-analyzer", live: "https://ai-resume-analyzer-gamma-lake.vercel.app/" },
-
-  { id: 5, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg", description: "A unified university platform connecting students, resources, and campus services with real-time features.", details: "Built UniHub — a comprehensive university hub platform designed to connect students with campus resources, services, and communities. Features real-time chat using Socket.io, JWT authentication for secure access, and a modern responsive UI. Backend powered by Node.js/Express.js with MongoDB database for scalable data management.", tech: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "JWT", "Socket.io"], github: "https://github.com/tasheayansa6/UniHub", live: "https://unihub-h67h.onrender.com" },
-  { id: 6, title: "Shaggar Real Estate", category: "Full Stack + AI", image: "/port/photo_2026-06-21_11-25-39.jpg", description: "AI-powered real estate platform with intelligent property recommendations and virtual tours.", details: "Developed an advanced real estate platform using the MERN stack (MongoDB, Express.js, React, Node.js) enhanced with AI capabilities. Features include intelligent property search, AI-powered recommendations, virtual property tours, and real-time updates. Implements JWT authentication for secure user management and Socket.io for real-time notifications.", tech: ["React", "Node.js", "Express.js", "MongoDB", "AI", "JWT", "Socket.io"], github: "https://github.com/tasheayansa6/shaggar_realstat2", live: "https://shaggar-realstate.vercel.app" },
+  { id: 4, title: "CoinPulse", category: "Full Stack", image: "/port/coinpulse.jpg", description: "Real-time cryptocurrency tracking app with live price updates and market analytics.", details: "Built CoinPulse — a real-time cryptocurrency tracking application featuring live price updates, market analytics, and interactive charts. Developed with Next.js for fast server-side rendering and a clean, responsive UI.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/coinpulse", live: "https://coinpulse-orpin.vercel.app/" },
+  { id: 5, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg", description: "A unified university platform connecting students, resources, and campus services in one place.", details: "Built UniHub — a comprehensive university hub platform designed to connect students with campus resources, services, and communities. Features a modern UI with seamless navigation across university tools and services.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/UniHub", live: "https://unihub-h67h.onrender.com" },
+  { id: 6, title: "Shaggar Real Estate", category: "Full Stack", image: "/port/photo_2026-06-21_11-25-39.jpg", description: "A modern real estate platform for Shaggar, featuring property listings, search filters, and a responsive UI.", details: "Developed a modern real estate platform for Shaggar, featuring property listings, advanced search filters, and a clean responsive UI. Built with Next.js and Tailwind CSS to provide a seamless property browsing experience.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/shaggar_realstat2", live: "https://shaggar-realstate.vercel.app" },
 ];
 
 const contactInfo = [
   { icon: <Mail className="w-5 h-5" />, label: "Email", value: "teshaleayansa6@gmail.com", link: "mailto:teshaleayansa6@gmail.com" },
-  { icon: <FaLinkedin className="w-5 h-5" />, label: "LinkedIn", value: "tashe-ayansa", link: "https://www.linkedin.com/in/tashe-ayansa-a3a54b372" },
-  { icon: <FaGithub className="w-5 h-5" />, label: "GitHub", value: "tasheayansa6", link: "https://github.com/tasheayansa6" },
-  { icon: <FaInstagram className="w-5 h-5" />, label: "Instagram", value: "@tasheayansa", link: "https://www.instagram.com/tasheayansa/" },
+  { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", value: "tashe-ayansa", link: "https://www.linkedin.com/in/tashe-ayansa-a3a54b372" },
+  { icon: <Github className="w-5 h-5" />, label: "GitHub", value: "tasheayansa6", link: "https://github.com/tasheayansa6" },
+  { icon: <Instagram className="w-5 h-5" />, label: "Instagram", value: "@tasheayansa", link: "https://www.instagram.com/tasheayansa/" },
   { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+251 926 637 774", link: "tel:+251926637774" },
   { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Dire Dawa, Ethiopia" },
 ];
@@ -123,14 +122,14 @@ export default function Page() {
                 <Download className="w-4 h-4" /> Download CV
               </a>
               <a href="https://github.com/tasheayansa6" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-accent transition-all">
-                <FaGithub className="w-4 h-4" /> GitHub
+                <Github className="w-4 h-4" /> GitHub
               </a>
               <a href="https://www.linkedin.com/in/tashe-ayansa-a3a54b372" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-accent transition-all">
-                <FaLinkedin className="w-4 h-4" /> LinkedIn
+                <Linkedin className="w-4 h-4" /> LinkedIn
               </a>
             </div>
             <div className="flex items-center justify-center lg:justify-start gap-2 text-sm text-white/40 font-mono">
-              <Mail className="w-4 h-4" />
+              <MailIcon className="w-4 h-4" />
               <a href="mailto:teshaleayansa6@gmail.com" className="hover:text-accent transition-colors">teshaleayansa6@gmail.com</a>
             </div>
           </motion.div>
@@ -257,7 +256,7 @@ export default function Page() {
                   <div className="flex items-center gap-4 pt-1">
                     {project.github && (
                       <a href={project.github} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} className="flex items-center gap-1.5 text-sm text-white/40 hover:text-accent transition-colors">
-                        <FaGithub className="w-4 h-4" /> Code
+                        <Github className="w-4 h-4" /> Code
                       </a>
                     )}
                     {project.live && (
@@ -296,7 +295,7 @@ export default function Page() {
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.github && (
                       <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-accent/50 transition-all">
-                        <FaGithub className="w-4 h-4" /> View Code
+                        <Github className="w-4 h-4" /> View Code
                       </a>
                     )}
                     {selectedProject.live && (
