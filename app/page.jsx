@@ -52,18 +52,29 @@ const skills = {
 
 const experiences = [
   { title: "Cryptography Developer", company: "INSA, Ethiopia", period: "June 30 - August 30", description: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards." },
-  { title: "Full Stack Developer", company: "CoinPulse & Personal Projects", period: "February 2026", description: "Built CoinPulse — a real-time cryptocurrency tracking app with live price updates and market analytics using Next.js." },
-  { title: "Web Based Diabetes Prediction", company: "Personal Project", period: "March 12 - Present", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
-  { title: "Full Stack Developer", company: "Shaggar Real Estate", period: "2026 - Present", description: "Developed a modern real estate platform for Shaggar, featuring property listings, search filters, and a responsive UI built with Next.js and Tailwind CSS." },
+  { title: "Full Stack Developer", company: "UniHub Platform", period: "2025 - Present", description: "Built UniHub — a full-stack university platform using React frontend and Node.js/Express.js backend with MongoDB, JWT authentication, real-time chat via Socket.io, and Axios for API communication." },
+  { title: "Full Stack Developer", company: "Shaggar Real Estate", period: "2026 - Present", description: "Developed an AI-powered MERN stack real estate platform with Node.js/Express.js backend, MongoDB database, JWT authentication, Socket.io real-time notifications, and AI-driven property recommendations." },
+  { title: "Machine Learning Developer", company: "Personal Project", period: "March 2026 - Present", description: "Built a web-based diabetes prediction system using Machine Learning (Flask backend) with a responsive frontend built with HTML, Tailwind CSS, and JavaScript." },
 ];
 
 const projects = [
   { id: 1, title: "Post-Quantum KEM Implementation", category: "Cryptography", image: "/port/pkem.jpg", description: "Implementation of Post-Quantum Key Encapsulation Mechanism using C language, resistant to quantum computer attacks.", details: "Designed and implemented a Post-Quantum Key Encapsulation Mechanism (KEM) in C, focusing on secure key generation, encapsulation, and decapsulation aligned with modern cryptographic standards. Follows NIST post-quantum cryptography guidelines.", tech: ["C", "OpenSSL", "Cryptography", "Post-Quantum"], github: "https://github.com/tasheayansa6/Post-Quantum-KEM-Implementation", live: null },
   { id: 2, title: "Web Based Diabetes Prediction", category: "AI & ML", image: "/port/photo_2026-06-21_11-51-18.jpg", description: "Web-based diabetes prediction system powered by Machine Learning with a responsive frontend.", details: "Built a web-based diabetes prediction system using a Machine Learning model served via a Flask backend. The frontend is built with HTML, Tailwind CSS, and JavaScript, providing a clean and responsive interface for users to input health data and receive predictions.", tech: ["Python", "Flask", "JavaScript", "Tailwind CSS", "HTML5", "ML"], github: "https://github.com/tasheayansa6/diabetes-prediction-system", live: "https://diabetes-prediction-system-n7ik.onrender.com" },
   { id: 3, title: "AI Resume Analyzer", category: "AI & Web", image: "/port/ai resume.jpg", description: "AI-powered resume analysis web app that extracts key information, evaluates skills, and provides intelligent feedback.", details: "Developed an AI-powered resume analysis web application that extracts key information from uploaded resumes, evaluates skills against job descriptions, and provides intelligent, actionable feedback.", tech: ["React", "Tailwind CSS", "JavaScript", "AI"], github: "https://github.com/tasheayansa6/ai-resume-analyzer", live: "https://ai-resume-analyzer-gamma-lake.vercel.app/" },
-  { id: 4, title: "CoinPulse", category: "Full Stack", image: "/port/coinpulse.jpg", description: "Real-time cryptocurrency tracking app with live price updates and market analytics.", details: "Built CoinPulse — a real-time cryptocurrency tracking application featuring live price updates, market analytics, and interactive charts. Developed with Next.js for fast server-side rendering and a clean, responsive UI.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/coinpulse", live: "https://coinpulse-orpin.vercel.app/" },
-  { id: 5, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg", description: "A unified university platform connecting students, resources, and campus services in one place.", details: "Built UniHub — a comprehensive university hub platform designed to connect students with campus resources, services, and communities. Features a modern UI with seamless navigation across university tools and services.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/UniHub", live: "https://unihub-h67h.onrender.com" },
-  { id: 6, title: "Shaggar Real Estate", category: "Full Stack", image: "/port/photo_2026-06-21_11-25-39.jpg", description: "A modern real estate platform for Shaggar, featuring property listings, search filters, and a responsive UI.", details: "Developed a modern real estate platform for Shaggar, featuring property listings, advanced search filters, and a clean responsive UI. Built with Next.js and Tailwind CSS to provide a seamless property browsing experience.", tech: ["Next.js", "React", "Tailwind CSS", "JavaScript"], github: "https://github.com/tasheayansa6/shaggar_realstat2", live: "https://shaggar-realstate.vercel.app" },
+  { id: 4, title: "UniHub", category: "Full Stack", image: "/port/photo_2026-06-21_11-58-23.jpg",
+    description: "A unified university platform connecting students, resources, and campus services with real-time features.",
+    details: "Built UniHub — a full-stack university platform. Frontend built with React, Tailwind CSS, and Axios for API calls. Backend powered by Node.js and Express.js with MongoDB database, JWT authentication for secure access, and Socket.io for real-time chat and notifications.",
+    tech: ["React", "Tailwind CSS", "Axios", "React Router", "Node.js", "Express.js", "MongoDB", "JWT", "Socket.io"],
+    frontend: ["React", "Tailwind CSS", "Axios", "React Router"],
+    backend: ["Node.js", "Express.js", "MongoDB", "JWT", "Socket.io"],
+    github: "https://github.com/tasheayansa6/UniHub", live: "https://unihub-h67h.onrender.com" },
+  { id: 5, title: "Shaggar Real Estate", category: "Full Stack + AI", image: "/port/photo_2026-06-21_11-25-39.jpg",
+    description: "AI-powered MERN stack real estate platform with intelligent property recommendations and real-time updates.",
+    details: "Developed a full-stack real estate platform using the MERN stack. React frontend with Tailwind CSS and Axios, Node.js/Express.js backend with MongoDB, JWT authentication, Socket.io for real-time notifications, and AI integration for intelligent property recommendations and smart search.",
+    tech: ["React", "Tailwind CSS", "Axios", "Node.js", "Express.js", "MongoDB", "JWT", "Socket.io", "AI"],
+    frontend: ["React", "Tailwind CSS", "Axios"],
+    backend: ["Node.js", "Express.js", "MongoDB", "JWT", "Socket.io", "AI"],
+    github: "https://github.com/tasheayansa6/shaggar_realstat2", live: "https://shaggar-realstate.vercel.app" },
 ];
 
 const contactInfo = [
@@ -292,6 +303,33 @@ export default function Page() {
                     <h3 className="font-mono text-accent text-sm mb-3 uppercase tracking-wider">Overview</h3>
                     <p className="text-white/60 leading-relaxed">{selectedProject.details}</p>
                   </div>
+
+                  {/* Frontend / Backend split for full-stack projects */}
+                  {selectedProject.frontend && selectedProject.backend && (
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p className="font-mono text-xs text-accent mb-3 uppercase tracking-wider flex items-center gap-1.5">
+                          <span>⚛️</span> Frontend
+                        </p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {selectedProject.frontend.map((t, i) => (
+                            <span key={i} className="font-mono text-xs px-2 py-1 bg-accent/10 text-accent border border-accent/30 rounded">{t}</span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="bg-white/5 border border-white/10 rounded-xl p-4">
+                        <p className="font-mono text-xs text-accent mb-3 uppercase tracking-wider flex items-center gap-1.5">
+                          <span>🟢</span> Backend
+                        </p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {selectedProject.backend.map((t, i) => (
+                            <span key={i} className="font-mono text-xs px-2 py-1 bg-white/5 text-white/70 border border-white/10 rounded">{t}</span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.github && (
                       <a href={selectedProject.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-accent/50 transition-all">
