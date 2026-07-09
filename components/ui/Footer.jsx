@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Heart, Terminal, Instagram } from "lucide-react";
+import { Mail, Heart, Terminal } from "lucide-react";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -22,13 +23,13 @@ export default function Footer() {
 
           <div className="flex items-center gap-4">
             <a href="https://github.com/tasheayansa6" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors" aria-label="GitHub">
-              <Github className="w-5 h-5" />
+              <FaGithub className="w-5 h-5" />
             </a>
             <a href="https://www.linkedin.com/in/tashe-ayansa-a3a54b372" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors" aria-label="LinkedIn">
-              <Linkedin className="w-5 h-5" />
+              <FaLinkedin className="w-5 h-5" />
             </a>
             <a href="https://www.instagram.com/tasheayansa/" target="_blank" rel="noopener noreferrer" className="text-white/40 hover:text-accent transition-colors" aria-label="Instagram">
-              <Instagram className="w-5 h-5" />
+              <FaInstagram className="w-5 h-5" />
             </a>
             <a href="mailto:teshaleayansa6@gmail.com" className="text-white/40 hover:text-accent transition-colors" aria-label="Email">
               <Mail className="w-5 h-5" />
